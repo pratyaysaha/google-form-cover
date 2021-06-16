@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/adminconsole.css'/>
+    <link rel="stylesheet" href='/signup.css'/>
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+    <%-include('../views/header-nt',{name: data.name})%>
+    <div class="admin-container">
+        <div class="create-test">
+            <div class="content">
+                <div class="admin-wrapper aw1">
+                    <div class="admin-title">
+                        New Test
+                    </div>
+                    <input class="input userid" type="text" value="<%=data._id%>" hidden />
+                    <div class="input-field">
+                        <i class="fas fa-scroll"></i>
+                        <input class="input name" type="text" placeholder="Test Name"/>
+                    </div> 
+                    <div class="input-field">
+                        <i class="fas fa-code"></i>
+                        <input class="input link" type="text" placeholder="Google Form Script" oninput="replace(this)" onblur="replace(this)"/>
+                    </div>
+                    <div class="input-field time">
+                        <i class="fas fa-hourglass-start"></i>
+                        <div class="input-content">
+                            <div class="input-label">
+                                Start Time
+                            </div>
+                            <input class="input startTime" id="start-time" type="datetime-local" placeholder="Start Time"/>
+                        </div>
+                    </div>
+                    <div class="input-field time">
+                        <i class="fas fa-hourglass-end"></i>
+                        <div class="input-content">
+                            <div class="input-label">
+                                End Time
+                            </div>
+                            <input class="input endTime" type="datetime-local" placeholder="End Time"/>
+                        </div>
+                    </div>
+                    <div class="button-container admin">
+                        <div class="button-container-left">
+                            <div class="error-message">
+                                
+                            </div>
+                        </div>
+                        <div class="button-container-right create">
+                            <div class="button create" onclick="createTest()">
+                                Create
+                            </div>
+                            <div class="loading">
+                                <i class="fas fa-circle-notch fa-spin"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-wrapper aw2">
+                    <div class="admin-title assign">
+                        Assign examinees
+                    </div>
+                    <input type="text" class="input testid" hidden>
+                    <div class="input-field">
+                        <i class="fas fa-scroll"></i>
+                        <input class="input qname" type="text" placeholder="Test Name" disabled/>
+                    </div> 
+                    <div class="input-field">
+                        <textarea class="input examinees" type="text" placeholder="Test Name" style="height: 210px; resize: none;"></textarea>
+                    </div>
+                    <div class="button-container admin">
+                        <div class="button-container-left">
+                            <div class="error-message">
+                                
+                            </div>
+                        </div>
+                        <div class="button-container-right assign">
+                            <div class="button create" onclick="cancelAssignees()">
+                                Cancel
+                            </div>
+                            <div class="button create" onclick="assign()">
+                                Assign
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="test-container">
+        <div class="admin-title">
+            Your tests
+        </div>
+       <div class="tests">
+        
+       </div>
+    </div>
+    </div>
+</body>
+<script src="/adminconsole.js"></script>
+</html>

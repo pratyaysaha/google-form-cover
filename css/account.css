@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.account-container{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-field.disabled{
+    color: #444;
+}
+.plain{
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    user-select: none;
+}
+@media screen  and (max-width : 880px)
+{
+    .account-container{
+        width: 90%;
+    }
+}

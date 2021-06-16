@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/studentconsole.css'/>
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <%-include('../views/header-nt',{name: data.name})%>
+           <%const dateConvert=(date)=>{
+            var dateinFormat=`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()} ${date.toLocaleTimeString('en-US')}`
+            return dateinFormat
+        }%>
+    <div class="test-container">
+        <div class="big-title">
+            Your tests
+        </div>
+       <div class="tests">
+        <%tests.map((item,index)=>{%>
+            <div class="test t<%=index%>">
+                <div class="test-wrapper">
+                    <div class="label test-name">
+                        <div class="content"><%=item.name%></div>
+                    </div>
+                    <div class="label test-start">
+                        <div class="title">Start Time</div>
+                        <div class="content"><%=dateConvert(item.startTime)%></div>
+                    </div>
+                    <div class="label test-end">
+                        <div class="title">End Time</div>
+                        <div class="content"><%=dateConvert(item.endTime)%></div>
+                    </div>
+                    <div class="attempt-container">
+                        <div class="button attempt" onclick="location.assign(`${window.location.origin}/test/<%=item._id%>`)">
+                            Attempt
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        <%})%>
+       </div>
+    </div>
+</body>
+</html>

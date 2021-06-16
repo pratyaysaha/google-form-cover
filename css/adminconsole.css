@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+html,body{
+    width:100%;
+    height: 100%;
+    margin: 0px;
+}
+.admin-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 50px 10px 50px;
+
+}
+.admin-title{
+    font-family: 'Nunito', sans-serif;
+    font-size:30px;
+    font-weight: bold;
+}
+.create-test{
+    margin-top: 20px;
+    width: 100%;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.admin-wrapper
+{
+    width: 47%;
+    margin-bottom: 30px;
+}
+.aw2
+{
+    display: none;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.input-label
+{
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;  
+    font-weight: bold;
+    color: #777;
+}
+.input-content
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.input-content>.input{
+    width: auto;
+    min-width: none;
+}
+.button-container.admin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85%;
+    align-items: center;
+}
+.button-container-left
+{
+    display: flex;
+}
+.button-container-right{
+    display: flex;
+}
+.button-container-right>div{
+    margin-left: 20px;
+}
+.button-container-left>div{
+    margin-right: 30px;
+    color: #444;
+    font-size: 20px;
+}
+.button-container-left>div:hover{
+    color: #000;
+    cursor: pointer;
+}
+.test-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}
+.tests{
+    margin: 20px 50px 10px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.test{
+    width: 400px;
+    height: 240px;
+    border: 2px solid #444;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+.test-wrapper{
+    width: 85%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.test-label
+{
+    margin-bottom: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+}
+.test-title{
+    width : 30%;
+    font-weight: bold;
+}
+.test-label.test-name > .test-content
+{
+    font-size: 23px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+}
+.test-name-wrapper{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.attempt-container
+{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    user-select: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+@media screen  and (max-width : 880px)
+{
+    .content{
+        align-items: center;
+        justify-content: center;
+    }
+    .admin-wrapper{
+        width: 95%;
+    }
+    .button-container.admin{
+        width: 95%;
+    }
+    .tests{
+        margin: 20px 10px 10px 10px;
+    }
+    .test{
+        width: 95%;
+        margin-right: 0px;
+    }
+    .admin-container{
+        margin: 20px 10px 10px 10px;
+
+    }
+}

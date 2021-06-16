@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyQuiz</title>
+</head>
+<body>
+    <div>Google Form</div>
+    <div class="input">
+        <input class="frame" type="text"/>
+        <button onclick="submit()">ADD</button>
+    </div>
+   <div class="output">
+        
+   </div>
+</body>
+<style>
+    html,body{
+        margin:0px;
+        width: 100%;
+        height:100%;
+    }
+    .test-iframe
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .output{
+        width: 100%;
+        height: calc(100% - 80px);
+        background-color: aliceblue;
+    }
+</style>
+<script>
+    const submit=()=>{
+        const dom= document.querySelector('.frame').value
+        document.querySelector('.output').insertAdjacentHTML("beforeend",dom)
+        document.getElementsByTagName('iframe')[0].className='test-iframe'  
+    }
+</script>
+</html>

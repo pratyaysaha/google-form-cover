@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/gformpage.css'/>
+    <title><%=data.name%></title>
+</head>
+<body>
+    <input class='frame' value="<%=data.link%>" hidden/>
+    <input class='timeLimit' value="<%=timeLimit%>" hidden/>
+    <input class='end' value="<%=data.endTime%>" hidden/>
+    <div class="heading">
+        <div class="left">
+            <%=data.name%>
+        </div>
+        <div class="right">
+            <div class="title">Time Left :</div>
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="disclaimer">
+        <div class="title">
+            Point to note : 
+        </div>
+        <div class="content">
+            There is no auto-submit. So please submit before time or else your form will not be submitted
+        </div>
+    </div>
+    <div class="google-form">
+
+    </div>
+</body>
+
+<script src="/gform.js"></script>
+</html>
