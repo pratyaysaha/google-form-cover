@@ -70,4 +70,19 @@ router.delete('/:testid',async (req,res)=>{
 
     }
 })
+router.get('/choose/exams',async(req, res)=>{
+    try{
+        const allTest= await testModel.find({})
+        const tests=[]
+        allTest.map((item)=>{
+            if(item.examinees.includes(req.session.userDetails.email)){
+                tests.push(item)
+            }
+        })
+        res.json({status: true, data: tests})
+    }
+    catch(err){
+        res.json({status: false, error: "Database error", additional : err.msg, code: 101 })
+    }
+})
 module.exports=router
