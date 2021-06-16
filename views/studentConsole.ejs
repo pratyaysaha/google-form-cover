@@ -26,11 +26,11 @@
                     </div>
                     <div class="label test-start">
                         <div class="title">Start Time</div>
-                        <div class="content"><%=dateConvert(item.startTime)%></div>
+                        <div class="content"><%=dateConvert(new Date(item.startTime))%></div>
                     </div>
                     <div class="label test-end">
                         <div class="title">End Time</div>
-                        <div class="content"><%=dateConvert(item.endTime)%></div>
+                        <div class="content"><%=dateConvert(new Date(item.endTime))%></div>
                     </div>
                     <div class="attempt-container">
                         <div class="button attempt" onclick="location.assign(`${window.location.origin}/test/<%=item._id%>`)">
