@@ -1,0 +1,11 @@
+---
+application:
+  name: "formcover"
+  project: "google-form"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-formcover"
+  routes:
+  - application_name: "formcover"
+    paths:
+    - "/*"
